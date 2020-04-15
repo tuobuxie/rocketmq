@@ -31,7 +31,7 @@ public class TestProducer {
         producer.setNamesrvAddr("172.20.20.47:9876");
         producer.start();
 
-        for (int i = 0; i < 1; i++)
+        for (int i = 0; i < 1; i++) {
             try {
                 {
                     Message msg = new Message("TopicTest1",
@@ -51,6 +51,7 @@ public class TestProducer {
             } catch (Exception e) {
                 e.printStackTrace();
             }
+        }
         producer.shutdown();
     }
 }
